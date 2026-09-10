@@ -104,6 +104,10 @@ unpatched (same behavior as before the fix).
    `"ok":true`.
 3. Use Cline with Ollama as normal. Long thinking no longer kills the stream.
 
+## Mac / Linux
+this repository has been forked by @CesarR70 who has made a new version that should be compatibale.
+https://github.com/CesarR70/Cline-BodyTimeout-Mac-Linux-Fix
+
 ## Tunables (env vars, optional)
 
 | Variable | Default | Meaning |
