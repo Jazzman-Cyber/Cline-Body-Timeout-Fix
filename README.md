@@ -79,6 +79,9 @@ unpatched (same behavior as before the fix).
 | `test-all.cjs` / `test-run.cjs` | end-to-end tests: `node test-all.cjs` |
 | `package.json` + `node_modules/` | local `undici` used by the patch |
 
+## requirements:
+you must run "npm install" to insure that you have a full working copy of node.js.
+
 ## When / how to run the injector
 
 - Initial setup: copy the Cline-timeout-fix folder to anywhere you like, I just put it on the C: drive.
