@@ -82,9 +82,9 @@ unpatched (same behavior as before the fix).
 ## When / how to run the injector
 
 - Initial setup: copy the Cline-timeout-fix folder to anywhere you like, I just put it on the C: drive.
-  run the bat file 
+  run the bat file once
   
-- After **every Cline update** (it replaces the extension files):
+- After **every Cline update** run it again because the cline update will replace the extension files.
   
   then reload the VS Code window. The script is idempotent — running it
   twice is safe.
@@ -92,7 +92,7 @@ unpatched (same behavior as before the fix).
   - After **moving or renaming this folder**: the path baked into Cline is absolute, so re-run the
     injector - it detects a stale path and re-points it automatically.
 
-  You don't run it on normal startup.
+  You don't need to run it every time on normal startup.
   The patch is written directly into Cline's files on disk and persists across reboots/reloads
 
 ## Activating and verifying
