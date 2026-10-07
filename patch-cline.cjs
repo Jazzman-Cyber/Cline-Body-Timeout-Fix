@@ -47,10 +47,13 @@ function main() {
   });
 
   const newest = dirs[0];
-  const entryFile = path.join(extRoot, newest, 'extension.js');
+  let entryFile = path.join(extRoot, newest, 'extension.js');
   if (!fs.existsSync(entryFile)) {
-    console.error('Entry file not found: ' + entryFile);
-    process.exit(1);
+    entryFile = path.join(extRoot, newest, 'dist', 'extension.js');
+    if (!fs.existsSync(entryFile)) {
+      console.error('Entry file not found: ' + entryFile);
+      process.exit(1);
+    }
   }
 
   const src = fs.readFileSync(entryFile, 'utf8');
